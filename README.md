@@ -14,7 +14,7 @@
 **1. Клонировать репозиторий**
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/yankochur/gamelab-academy.git
 cd gamelab-academy
 ```
 
@@ -78,7 +78,6 @@ curl -X POST http://localhost:8000/api/users \
 ```
 
 ### Currencies
-
 | Метод  | URL                    | Описание               |
 |--------|------------------------|------------------------|
 | GET    | /api/currencies        | Список валют           |
