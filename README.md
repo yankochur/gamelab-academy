@@ -2,6 +2,8 @@
 
 Учебный REST API проект для академии.
 
+> **Windows:** все команды выполняй в [WSL](https://learn.microsoft.com/ru-ru/windows/wsl/install) (Windows Subsystem for Linux). Установи его перед началом: `wsl --install` в PowerShell от имени администратора, затем перезагрузи компьютер. Mac и Linux — работай напрямую в терминале.
+
 ## Установка необходимых инструментов
 
 Перед началом убедись что установлено:
