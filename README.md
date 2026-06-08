@@ -2,12 +2,23 @@
 
 Учебный REST API проект для академии.
 
-## Требования
+## Установка необходимых инструментов
 
-- PHP 8.2+
-- Composer
-- Docker и Docker Compose
-- [Symfony CLI](https://symfony.com/download) (опционально)
+Перед началом убедись что установлено:
+
+**PHP 8.4+**
+- macOS: `brew install php`
+- Ubuntu/Debian: `sudo apt install php8.4 php8.4-pgsql php8.4-xml php8.4-mbstring`
+- Windows: [windows.php.net/download](https://windows.php.net/download)
+
+**Composer**
+- Все платформы: [getcomposer.org/download](https://getcomposer.org/download)
+
+**Docker и Docker Compose**
+- Все платформы: [docs.docker.com/get-docker](https://docs.docker.com/get-docker)
+
+**Symfony CLI** (опционально, нужен только для запуска сервера командой `symfony server:start`)
+- Все платформы: [symfony.com/download](https://symfony.com/download)
 
 ## Быстрый старт
 
@@ -24,7 +35,7 @@ cd gamelab-academy
 docker compose up -d
 ```
 
-Postgres будет доступен на порту **15432**, Redis — на **16379**
+Postgres будет доступен на порту **15432**, Redis — на **16379**.
 
 **3. Установить PHP-зависимости**
 
@@ -78,6 +89,7 @@ curl -X POST http://localhost:8000/api/users \
 ```
 
 ### Currencies
+
 | Метод  | URL                    | Описание               |
 |--------|------------------------|------------------------|
 | GET    | /api/currencies        | Список валют           |
@@ -86,3 +98,12 @@ curl -X POST http://localhost:8000/api/users \
 | PUT    | /api/currencies/{id}   | **TODO** — реализовать |
 | DELETE | /api/currencies/{id}   | **TODO** — реализовать |
 
+## Задание
+
+Твоя задача — реализовать оставшиеся методы в `src/Controller/CurrenciesController.php`:
+
+- `POST /api/currencies` — создание валюты (поля: `name`, `description`, `active`)
+- `PUT /api/currencies/{id}` — обновление валюты
+- `DELETE /api/currencies/{id}` — удаление валюты
+
+Посмотри на `src/Controller/UsersController.php` как на образец — там реализован полный CRUD.
