@@ -6,21 +6,35 @@
 
 ## Установка необходимых инструментов
 
-Перед началом убедись что установлено:
+**PHP 8.4 + Composer**
 
-**PHP 8.4+**
-- macOS: `brew install php`
-- Ubuntu/Debian: `sudo apt install php8.4 php8.4-pgsql php8.4-xml php8.4-mbstring`
-- Windows: [windows.php.net/download](https://windows.php.net/download)
-
-**Composer**
-- Все платформы: [getcomposer.org/download](https://getcomposer.org/download)
+```bash
+sudo apt update
+sudo apt install -y php8.4 php8.4-pgsql php8.4-xml php8.4-mbstring php8.4-curl
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+php -r "unlink('composer-setup.php');"
+```
 
 **Docker и Docker Compose**
-- Все платформы: [docs.docker.com/get-docker](https://docs.docker.com/get-docker)
 
-**Symfony CLI** (опционально, нужен только для запуска сервера командой `symfony server:start`)
-- Все платформы: [symfony.com/download](https://symfony.com/download)
+```bash
+sudo apt install -y ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list
+sudo apt update
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
+sudo usermod -aG docker $USER
+newgrp docker
+```
+
+**Symfony CLI** (опционально, нужен только для `symfony server:start`)
+
+```bash
+curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.deb.sh' | sudo -E bash
+sudo apt install -y symfony-cli
+```
 
 ## Быстрый старт
 
