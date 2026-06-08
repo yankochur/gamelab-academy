@@ -2,7 +2,7 @@
 
 Учебный REST API проект для академии.
 
-> **Windows:** все команды выполняй в [WSL](https://learn.microsoft.com/ru-ru/windows/wsl/install) (Windows Subsystem for Linux). Установи его перед началом: `wsl --install` в PowerShell от имени администратора, затем перезагрузи компьютер. Mac и Linux — работай напрямую в терминале.
+> **Windows:** все команды выполняй в [WSL](https://learn.microsoft.com/ru-ru/windows/wsl/install) с Ubuntu 24.04. Установи в PowerShell от имени администратора: `wsl --install -d Ubuntu-24.04`, затем перезагрузи компьютер. Версии ниже 24.04 не рекомендуются, версии выше могут вызывать проблемы с пакетами PHP. Mac и Linux — работай напрямую в терминале.
 
 ## Установка необходимых инструментов
 
